@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website With Responsive </title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom File LInk-->
+  <link rel="stylesheet" href="trave.css" />
+  <script src=""></script>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <h3><img src="./img/logo.png">Travel<span>ex</span></h3>
+      <div class="nav-link" id="navlinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+          <li><img src="./img/home.png"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Packages</a>
+            <div class="sub-menu">
+              <ul>
+                <li><a href="#"> Maldives </a>
+                <li><a href="#"> Bali </a>
+                <li><a href="#"> dubai </a>
+                <li><a href="#"> Thailand</a>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h2> TOURS & TRAVELS </h2>
+      <h1> Let's Discover The World </h1>
+      <h1> Together </h1>
+      <a href="#booking" class="hero-btn">Book Now </a>
+    </div>
+  </section>
+
+  <!-- booking Section -->
+  <section id="booking">
+    <form name="frm" onsubmit="return demo()">
+      <div class="booking-col">
+        <h3> Destination </h3>
+        <select class="book" name="destination" id="dst">
+          <option value="destination 1">Destination 1</option>
+          <option value="destination 2">destination 2</option>
+          <option value="destination 3">destination 3</option>
+          <option value="destination 4">destination 4</option>
+        </select>
+      </div>
+      <div class="booking-col">
+        <h3>Depart Date</h3>
+        <input class="book" type="date" name="date" value="dat">
+      </div>
+      <div class="booking-col">
+        <h3>Return Date</h3>
+        <input class="book" type="date" name="date1" value="date">
+      </div>
+      <div class="booking-col">
+        <h3>Duration</h3>
+        <select class="book" name="duration" id="durn">
+          <option value="duration 1">Duration 1</option>
+          <option value="duration 2">duration 2</option>
+          <option value="duration 3">duration 3</option>
+          <option value="duration 4">duration 4</option>
+        </select>
+      </div><br>
+      <div class="booking-col">
+        <input class="submit" type="submit" placeholder="Submit" value="Submit Data">
+      </div>
+    </form>
+  </section>
+
+  <!-- javascript toggle menu  -->
+  <script>
+    let navLinks = document.getElementById("navlinks");
+    function showmenu() {
+      navLinks.style.right = "0";
+    }
+    function hidemenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+  <!-- Service  -->
+  <section class="service">
+    <p> SERVICES </p>
+    <h1> Tours & Travel Services </h1>
+
+    <div class="row">
+      <div class="service-col">
+        <i class="fas fa-route"></i>
+        <h2> Travel Guide </h2>
+        <p> It's just that they're going to <br> have a lot of time.A lot of <br>work is a lot of work </p>
+      </div>
+      <div class="service-col">
+        <i class="fas fa-ticket-alt"></i>
+        <h2> Ticket Booking </h2>
+        <p> It's just that they're going to<br> have a lot of time.A lot of <br> work is a lot of work </p>
+      </div>
+      <div class="service-col">
+        <i class="fas fa-hotel"></i>
+        <h2> Hotel Booking </h2>
+        <p> It's just that they're going to <BR> have a lot of time.A lot of <br> work is a lot of work </p>
+      </div>
+  </section>
+
+  <!-- Destination  -->
+
+  <section class="destination">
+    <p> DESTINATION </p>
+    <h1> Explore Top Destination </h1>
+
+    <div class="row">
+      <div class="destination-col">
+        <img src="./img/india.jpg" alt="" />
+        <div class="layer">
+          <h3> INDIA </h3>
+        </div>
+      </div>
+      <div class="destination-col">
+        <img src="./img/thailand.jpg" alt="" />
+        <div class="layer">
+          <h3> THAILAND </h3>
+        </div>
+      </div>
+      <div class="destination-col">
+        <img src="./img/dubai.jpg" alt="" />
+        <div class="layer">
+          <h3> DUBAI </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages  -->
+
+  <section class="packages">
+    <p class="ph"> PACKAGES </p>
+    <h1 class="ptp"> Pefect Tour Packages </h1>
+
+    <div class="roww">
+      <div class="packages-col">
+        <div><img src="./img/package-1.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+      <div class="packages-col">
+        <div><img src="./img/package-2.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+      <div class="packages-col">
+        <div><img src="./img/package-4.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+      <div class="packages-col">
+        <div><img src="./img/package-5.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+      <div class="packages-col">
+        <div><img src="./img/package-1.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+      <div class="packages-col">
+        <div><img src="./img/package-4.jpg"></div>
+        <div class="row1">
+          <p class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</p>
+          <p class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</p>
+          <p class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</p>
+        </div>
+        <a class="h5" href="">Discover amazing places of the world with us</a>
+        <div class="row1">
+          <h6 class="m-1"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+          <h5 class="m-1">$350</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call An Action -->
+  <section class="CAA">
+    <h4> About Us </h4>
+    <p>A Contact Us page is essential to building a brands website as it allows
+      visitors to contact you easily without leaving their browser.<br>
+      They also give you the opportunity to capture leads and improve customer service.</p>
+    <div class="icons">
+      <a href="">
+        <img src="./img/facebook (1).png">
+      </a>
+      <a href="">
+        <img src="./img/instagram (2).png">
+      </a>
+      <a href="">
+        <img src="./img/linkedin (1).png"></a>
+      </a>
+      <a href="">
+        <img src="./img/whatsapp (1).png">
+      </a>
+    </div>
+    <hr>
+    <p class="copyright">Copyright© 2023 <span>TravelEx</span> All rights reserved</p>
+  </section>
+
+  <!-- javascript booking validation -->
+  <script>
+    function demo() {
+      var destination = document.frm.destination.value;
+      var date = document.frm.date.value;
+      var date1 = document.frm.date1.value;
+      var duration = document.frm.duration.value;
+
+      if (destination === '-1') {
+        alert(" Select Your Destination");
+        document.frm.destination.focus();
+        return false;
+      }
+      if (date === '') {
+        alert("Enter Depart Date");
+        document.frm.date.focus();
+        return false;
+      }
+      if (date1 === '') {
+        alert("Enter Return Date");
+        document.frm.date1.focus();
+        return false;
+      }
+      if (duration === '-1') {
+        alert("Select your Duration.");
+        document.frm.duration.focus();
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
